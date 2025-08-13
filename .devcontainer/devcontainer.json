@@ -1,6 +1,9 @@
 {
   "name": "GarmentSeg Dev (Claude Code)",
-  "build": { "dockerfile": "Dockerfile" },
+  "build": {
+    "context": "..",
+    "dockerfile": "../Dockerfile"
+  },
   "customizations": {
     "vscode": {
       "extensions": [
