@@ -19,11 +19,15 @@
   "remoteUser": "node",
   "mounts": [
     "source=${localEnv:HOME}/.claude,target=/home/node/.claude,type=bind",
+    "source=${localEnv:HOME}/.config/openai,target=/home/node/.config/openai,type=bind",
+    "source=${localEnv:HOME}/.config/gcloud,target=/home/node/.config/gcloud,type=bind",
     "source=${localEnv:HOME}/.gitconfig,target=/home/node/.gitconfig,type=bind,readonly",
     "source=${localEnv:HOME}/.ssh,target=/home/node/.ssh,type=bind,readonly"
   ],
   "remoteEnv": {
     "CLAUDE_CONFIG_DIR": "/home/node/.claude",
+    "OPENAI_CONFIG_DIR": "/home/node/.config/openai",
+    "CLOUDSDK_CONFIG": "/home/node/.config/gcloud",
     "NODE_ENV": "development"
   },
   "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=delegated",
